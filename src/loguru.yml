@@ -1,0 +1,21 @@
+handlers:
+  - sink: ext://sys.stderr
+    format: '[{time:YYYY-MM-DD HH:mm:ss.SSS}] {message}'
+    level: TRACE
+    colorize: true
+  - sink: log/EZRLTopologyOptimizer.log
+    enqueue: true
+    serialize: false
+    level: TRACE
+    rotation: '10 MB'
+    compression: zip
+#levels:
+#  - name: NEW
+#    'no': 13
+#    icon: ¤
+#    color: ""
+#extra:
+#  common_to_all: default
+#activation:
+#  - [ "my_module.secret", false ]
+#  - [ "another_library.module", true ]
